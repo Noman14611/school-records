@@ -3,18 +3,18 @@ from feeapp import run_fee_app
 from attendanceapp import run_attendance_app
 from salaryapp import run_salary_app
 
-st.set_page_config(page_title="School Management System", layout="wide")
+st.set_page_config(page_title="School App", layout="wide")
+st.sidebar.title("🏫 School Management")
 
-st.sidebar.title("🏫 School Management System")
-app = st.sidebar.selectbox("Choose App", [
-    "📋 School Attendance Tracker",
-    "💰 School Fee Records",
-    "👨‍🏫 Teachers Salary Manager"
+app = st.sidebar.selectbox("Select App", [
+    "📋 Attendance Tracker",
+    "💰 Fee Records",
+    "👨‍🏫 Teacher Salary"
 ])
 
-if app == "📋 School Attendance Tracker":
+if app == "📋 Attendance Tracker":
     run_attendance_app()
-elif app == "💰 School Fee Records":
+elif app == "💰 Fee Records":
     run_fee_app()
-elif app == "👨‍🏫 Teachers Salary Manager":
+elif app == "👨‍🏫 Teacher Salary":
     run_salary_app()
