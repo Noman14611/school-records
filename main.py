@@ -1,6 +1,6 @@
 import streamlit as st
-from attendanceapp import run_attendance_app
 from feeapp import run_fee_app
+from attendanceapp import run_attendance_app
 from salaryapp import run_salary_app
 
 st.set_page_config(page_title="School Management System", layout="wide")
