@@ -85,4 +85,5 @@ def run_fee_app():
 
                 st.markdown(f"**{info['name']}** (Roll: {roll}, Class: {info['class']})")
                 st.write(f"💵 Monthly Fee: {info['monthly_fee']}")
-                st.write(f"📆 Fee Status for {month_filter if month_filter
+                st.write(f"📆 Fee Status for {month_filter if month_filter != 'All' else today_month}: {info['history'].get(month_filter if month_filter != 'All' else today_month, 'N/A')}")
+
